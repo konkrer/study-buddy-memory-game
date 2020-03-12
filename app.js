@@ -93,7 +93,7 @@ function clearTimersArray() {
   timersAddCards = [];
 }
 
-function setBlock(x=1000) { 
+function setBlock(x=760) { 
     block = true;
     return setTimeout(() => {
         block = false;
@@ -135,7 +135,7 @@ function doLogic(show, cardID, flipCardBlocker, card) {
 }
 
 function flipTwoCards(card) {
-    setBlock(1040);
+    setBlock(1010);
     for (let x of [card, currCard]) {
         setTimeout(function() {    
             flip(x);

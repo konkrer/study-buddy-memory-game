@@ -166,7 +166,7 @@ article {
     width: 100%;
     height: 100%; 
     color: whitesmoke;
-    transition: all 1s;  
+    transition: all .75s;  
     font-family: 'Play', sans-serif;
     transform-style: preserve-3d;
 }
