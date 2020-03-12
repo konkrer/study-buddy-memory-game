@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Bowlby+One+SC|Play&display=swap" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="normalize.css"/> 
+    <link type="text/css" rel="stylesheet" href="app.css"/> 
+    <script src="DATASTORE.js" defer></script>
+    <script src="app.js" defer></script>
+    <script src="party.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="title-scene">
+            <div class="title">
+                <h1>Study Buddy Memory Mashup</h1>
+            </div>
+        </div>
+        
+          
+        </div>
+        <div class="img-intro">
+            <div class=""><h3>Choose your interests.</h3></div>
+            <img src="static/brain.png" alt="image brain" class="">
+            <div class="d-inline-block"><h3>Test your knowledge.</h3></div>
+          </div>
+        <div class="trans-bg-1 form-zone">
+            <h2 class="red mb-2">Choose a topic</h2>
+            <form action="" class="mb-2">
+                <fieldset>
+                    <label for="JavaScript">JavaScript</label>
+                    <input type="radio" name="topic" id="JavaScript" value="JavaScript" checked>
+                
+                    <label for="Python">Python</label>
+                    <input type="radio" name="topic" id="Python" value="Python">
+                    
+                    <label for="CSS">CSS</label>
+                    <input type="radio" name="topic" id="CSS" value="CSS">
+                    
+                    <label for="HTML">HTML</label> 
+                    <input type="radio" name="topic" id="HTML" value="HTML">
+                </fieldset>        
+            <!-- <br>  -->
+            <div class="start-btn-div">
+                <button id="btn-1" class="btn">START GAME</button>
+            </div>   
+            </form>
+        </div>       
+    </header>
+
+    <div id="scoreboard" class="hidden">
+        <div class="score-timer"><span id="score-type">POINTS: </span> <span id="score">100</span></div>
+        <div id="highscoreDiv" class="hidden score-timer">HIGH SCORE: <span id="highscore"></span></div>
+        <div class="score-timer">TIMER: <span id="timer">300</span></div>
+    </div>
+
+    <section class="main">
+        <div id="card-div">
+            <article>
+                <h2 class="text-blue inst-title text-glow-white">How to play:</h2>
+                <h3>
+                    Pick a topic then start the game.
+                </h3>
+                <h3>    
+                    You can flip one card at a time then flip it back over. Flip two
+                    cards over at the same time when you think you can pair a question with its answer.
+                    If you are correct your points remain at 100, if you are wrong you will lose ten points.
+                </h3>
+                <h3>
+                    When you have paired all question cards with their answer card or time runs out your final score will be 
+                    calculated by multiplying your points by the timer value. The quicker you finish the 
+                    higher score you get.
+                </h3>
+                <h2>Good Luck!</h2>
+                <p class="float-left">ver 1.2 - 3-D effects</p>
+            </article>
+        </div>
+    </section>
+
+    <section class="game-over display-none">
+        <div class="flexbox-center-col">
+            <h1 id="overlay-close" class="">X</h1>
+            <h1>GAME OVER!</h1>
+            <h1>FINAL SCORE: <span class="final-score"></span></h1>
+            <h1>HIGH SCORE: <span class="high-score"></span></h1>
+        </div>     
+    </section>
+    
+    <div id="party-btn-div">
+        <button id="btn-2" class="btn">Enable Party Mode</button>
+    </div>
+
+    <!-- <footer class="text-dark text-glow-white">
+        <div class="text-blue mb-4">Who said studying has to be boring!</div>
+        <div class="flexbox-std">
+          <div> 
+              <div class="text-dark">See our other projects featured
+              <a href="https://quiz-me--konkrer.repl.co/">here</a>
+              and
+              <a href="https://www.latlmes.com/tech/cutting-edge-brain-training-1">here</a>
+              </div>
+          </div>
+          <div> 
+            <div> &copy; 2020 Brain Box Labs</div>
+          </div>
+        </div>
+        
+    </footer>    -->
+</body>
+</html>
