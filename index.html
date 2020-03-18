@@ -9,6 +9,7 @@
     <script src="DATASTORE.js" defer></script>
     <script src="app.js" defer></script>
     <script src="party.js" defer></script>
+    <script src="animate.js" defer></script>
 </head>
 <body>
     <header>
@@ -18,11 +19,12 @@
             </div>
         </div>
         
-          
         </div>
         <div class="img-intro">
             <div class=""><h3>Choose your interests.</h3></div>
-            <img src="static/brain.png" alt="image brain" class="">
+            <div class="flexbox-center-col brain">
+                <img src="static/brain.png" alt="image brain">
+            </div>
             <div class="d-inline-block"><h3>Test your knowledge.</h3></div>
           </div>
         <div class="trans-bg-1 form-zone">
@@ -40,6 +42,9 @@
                     
                     <label for="HTML">HTML</label> 
                     <input type="radio" name="topic" id="HTML" value="HTML">
+
+                    <label for="GIFS">GIFS</label> 
+                    <input type="radio" name="topic" id="GIFS" value="GIFS">
                 </fieldset>        
             <!-- <br>  -->
             <div class="start-btn-div">
@@ -55,7 +60,7 @@
         <div class="score-timer">TIMER: <span id="timer">300</span></div>
     </div>
 
-    <section class="main">
+    <section class="main flexbox-center-col">
         <div id="card-div">
             <article>
                 <h2 class="text-blue inst-title text-glow-white">How to play:</h2>
@@ -73,13 +78,12 @@
                     higher score you get.
                 </h3>
                 <h2>Good Luck!</h2>
-                <p class="float-left">ver 1.2 - 3-D effects</p>
             </article>
         </div>
     </section>
 
     <section class="game-over display-none">
-        <div class="flexbox-center-col">
+        <div class="flexbox-center-col game-over-inner">
             <h1 id="overlay-close" class="">X</h1>
             <h1>GAME OVER!</h1>
             <h1>FINAL SCORE: <span class="final-score"></span></h1>

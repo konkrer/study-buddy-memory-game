@@ -1,7 +1,7 @@
 'use strict'
 
 
-let titleFlipState = 0;
+let titleFlipState = 0.07;
 let currCard = null;
 let score = 100;
 let highScore = localStorage.getItem('highScore') || 0;
@@ -57,7 +57,7 @@ function flipTitle() {
 function initGame() {
     currCard = null;
     scoreBoard.classList.remove('hidden');
-    document.querySelector('.img-intro').style.display = 'none';
+    document.querySelector('.img-intro').classList.add('display-none');
     cardDiv.removeEventListener('click', flipCard);
 }
 
@@ -162,7 +162,9 @@ function getCard(targ) {
     let card, show = false;
     if (targ.tagName==='IMG') {
         card = targ.parentElement.parentElement;
-        show = true;
+        // if image is on the back of card we are SHOWING the card
+        // data-gif will be true for front of gif cards, not showing
+        if (!targ.dataset['gif']) show = true;
     }else card = targ.parentElement;
     return [card, show];
 }
@@ -216,6 +218,10 @@ function sleep() {
 function cardFactory (ques, i) {
     let pair = [];
     for (let string of Object.values(ques)) {
+        if (/^https:\/\//.test(string)){
+            console.log('in make img')
+            string = `<img src="${string}" class="card-img" data-gif="true" alt="gif">`;
+        }
         let cardHTML = 
             `<div class="scene">
                 <div class="card" data-id="${i}">        

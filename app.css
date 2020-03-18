@@ -8,7 +8,7 @@ body {
     background-repeat: repeat;
     background-size: auto;
     text-align: center;
-    padding: 5% 5% 0% 5%; 
+    padding: 1.5% 5% 0% 5%; 
     font-size: 20px;
     font-family: 'Bowlby One SC', cursive;
     color: cornsilk;
@@ -17,11 +17,7 @@ body {
 }
 
 header {
-    margin-bottom: 60px;  
-    -webkit-text-stroke: 1px blue;
-}
-
-.title-scene {
+    margin-bottom: 20px;
     perspective: 400px;
     
 }
@@ -30,23 +26,26 @@ header {
     width: 85%;
     height: 85%;
     color: red;
-    background-color: rgb(3, 226, 3);
-    border-radius: 10px;
+    background-color: rgb(27, 0, 81);
+    border-radius: 130px 130px 15px 15px;
     border: blue 3px solid;
-    text-shadow: 5px 5px 5px black;
+    text-shadow: 7px 7px 5px black;
     margin: 0 auto;
     margin-bottom: .8em;
     transition: all 3000ms;
     position: relative;
-    transform-style: preserve-3d;
+    /* transform-style: preserve-3d; */
+    transform: rotateX(25deg);
 }
 
 h1 {
-    position: relative;
+    /* position: relative; */
     font-size: 60px;
     margin: .5em 1em 0 1em;
-    transform: rotateX(45deg);
     transform-origin: top;
+    -webkit-text-stroke: 1px #0fff00;
+    transform: rotateX(10deg);
+    transform-style: flat;
 }
 
 .img-intro {
@@ -54,17 +53,27 @@ h1 {
     justify-content: center;
     align-items: center;
     min-width: 300px;
-    background-color: whitesmoke;
-    border-radius: 10px;
+    background-color: rgba(245, 245, 245, 1);
+    border-radius: 130px;
     color: brown;
     max-width: 650px;
     margin: 0 auto;
     padding: 5px 0;
-    -webkit-text-stroke: 0px blue;
+    transform: rotateX(5deg);
+    transform-style: preserve-3d;
   }
   
-.img-intro > img {
-    margin: 0 15px;
+.brain {
+    height: 70px;
+    width: 70px;
+  }
+
+.img-intro img {
+    transition: transform 400ms;
+}
+
+.brain-grow {
+      transform: scale(1.15);
   }
 
 #scoreboard {
@@ -90,9 +99,21 @@ h1 {
 
 .form-zone {
     width: 500px;
-    margin: 0 auto;
-    border-radius: 10px;
+    margin: 15px auto;
+    border-radius: 30px 30px 180px 180px;
     font-size: .8em;
+    padding: .3rem 1rem;
+    border: blue 3px solid;
+    transform: rotateX(25deg);
+    transform-style: preserve-3d;
+}
+
+.form-zone h2 {
+    text-shadow: 1px 1px 1px #00fff6,
+                 -1px 1px 1px #00fff6,
+                 1px -1px 1px #00fff6,
+                 -1px -1px 1px #00fff6;
+    margin-top: 0; 
 }
 
 .start-btn-div {
@@ -109,19 +130,18 @@ h1 {
 
 
 #btn-1 {
-    width: 200;
-    height: 80;
     font-size: 2em;
     border-radius: 15px;
-    background-color: rgb(70, 248, 103);
+    color: rgb(124, 0, 33);
+    background-color: #2dc02b;
     box-shadow: 3px 3px 3px black;
-    margin-bottom: 10px;
+    margin: 10px 0 0 0;
     transition: all 300ms;
-    -webkit-text-stroke: 0px blue;
+    
 }
 
 #btn-1:hover {
-    background-color: blue;
+    background-color: rgb(0, 81, 77);
     box-shadow: 5px 5px 5px black;
     font-size: 2.3em;
     margin-bottom: 0px;
@@ -130,24 +150,23 @@ h1 {
 
 article {
     font-family: 'Play', sans-serif;
-    background-color: rgba(94, 91, 91, .5);
+    background-color: rgba(94, 91, 91, .8);
     border-radius: 10px;
     padding: 2em 20%;
 }
 
 
 #card-div {
+    
     display: flex;
     align-items: center;
     justify-content: space-around;
     flex-wrap: wrap;
     flex-direction: row;
-    transition: color 20ms;
+    transition: color 200ms;
+    /* margin: 0 auto; */
     margin-bottom: 60px;
-}
-
-#card-div  p {
-    font-size: xx-small;
+    max-width: 1000px;
 }
 
 .scene {
@@ -156,18 +175,18 @@ article {
     height: 214px;
     position: relative;
     margin: 20px 15px;
-    /* padding: 1px; */
 }
 
 .card {
     position: absolute;
     border-radius: 5px;
-    border: 1px red solid;
+    border: 1px #000000 solid;
     width: 100%;
     height: 100%; 
     color: whitesmoke;
     transition: all .75s;  
     font-family: 'Play', sans-serif;
+    font-size:  large;
     transform-style: preserve-3d;
 }
 
@@ -179,7 +198,6 @@ article {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: .8em;
     position: absolute;
     backface-visibility: hidden;
     overflow: hidden;
@@ -205,10 +223,10 @@ article {
 }
 
 .card-img {
-    width: 150px;
-    height: 214px;
+    width: 105%;
+    height: 105%;
     border-radius: 5px;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 #btn-2 {
@@ -225,14 +243,6 @@ article {
     background-color: red;
 }
 
-#boom {
-    font-size: 200px;
-    color: green;
-    -webkit-text-stroke: 2px white;
-    text-shadow: 5px 5px 5px orange, -5px -5px 5px black;
-    margin: 40px 0 0 0;
-}
-
 .game-over {
     position: fixed;
     top: 0;
@@ -241,6 +251,7 @@ article {
     bottom: 0;
     background-color: rgba(5, 5, 5, .8);
     color: blue;
+    font-size: .6em;
     text-shadow: red 2px 2px 2px, 
                 red -2px 2px 2px, 
                 red 2px -2px 2px, 
@@ -288,10 +299,10 @@ article {
 }
 
 .text-glow-white {
-text-shadow: 1px 1px 3px white,
-    -1px -1px 3px white,
-    -1px 1px 3px white,
-    1px -1px 3px white;
+    text-shadow: 1px 1px 3px white,
+                -1px -1px 3px white,
+                -1px 1px 3px white,
+                1px -1px 3px white;
 }
 
 .inst-title {
@@ -299,13 +310,15 @@ text-shadow: 1px 1px 3px white,
 }
 
 .flexbox-center-col {
-    width: 100%;
-    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: .6em;
     flex-direction: column;
+}
+
+.game-over-inner {
+    width: 100%;
+    height: 100%;
 }
 
 .mb-2 {
@@ -329,7 +342,7 @@ fieldset {
 }
 
 .trans-bg-1 {
-    background-color: rgba(0, 0, 0, .7);
+    background-color: rgba(27, 0, 81, .9);
 }
 
 .float-left {
@@ -337,39 +350,61 @@ fieldset {
 }
 
 
-@media (min-width : 1400px) {
-    #party-btn-div {
-        visibility: visible;
+/* @media (min-width : 100px) 
+and (max-width : 449px) {
+    .scene {
+        width: 150px;
+        height: 214px;
+        margin: 20px 15px;
     }
-}
+} */
 
+/* @media (max-width: 999px)  // cannot get this to work properly
+and  (min-width: 500px) {     // breakpoint engaged below min-width
+    .scene {
+        width: 110px;
+        height: 157px;
+        margin: 17px 10px;
+    }
+} */
 
-@media (min-width : 1000px) 
-and (max-device-width : 1499px) {
+@media (min-width: 1000px) 
+and (max-width: 1499px) {
     header {
         padding-left: 10%;
         padding-right: 10%;
     }
 
-    #card-div {
-      margin-left: 8%;
-      margin-right: 8%;
+    .scene {
+        width: 111px;
+        height: 158px;
+        margin: 17px 10px;
+    }
+
+    .card {
+        font-size: medium;
     }
 }
 
-@media (min-width : 1500px) {
+@media (min-width: 1400px) {
+    #party-btn-div {
+        visibility: visible;
+    }
+}
+
+@media (min-width: 1500px) {
   header {
       padding-left: 20%;
       padding-right: 20%;
   }
 
-  #card-div {
+  /* #card-div {
       margin-left: 15%;
       margin-right: 15%;
     }
-}
+} */
 
-@media (min-width : 2126px) {
+@media (min-width: 2126px) {
   h1 {
       margin-top: .3em;
   }
