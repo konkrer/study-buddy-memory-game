@@ -111,8 +111,8 @@ const DATA = {
     ],
     GIFS: [
         {
-            question: 'https://media1.giphy.com/media/IbsQ8L4PTQ53SH7FnL/giphy.webp?cid=ecf05e479ac3ec00882e07bd3ea0779e245e8204477a6428&rid=giphy.webp',
-            answer: 'https://media1.giphy.com/media/IbsQ8L4PTQ53SH7FnL/giphy.webp?cid=ecf05e479ac3ec00882e07bd3ea0779e245e8204477a6428&rid=giphy.webp',
+            question: 'https://media1.giphy.com/media/1FMaabePDEfgk/giphy.gif?cid=ecf05e47b209c8f5912b45bcb20ee256dc8526a11d651e5e&rid=giphy.gif',
+            answer: 'https://media1.giphy.com/media/1FMaabePDEfgk/giphy.gif?cid=ecf05e47b209c8f5912b45bcb20ee256dc8526a11d651e5e&rid=giphy.gif',
         },
         {
             question: 'https://media1.giphy.com/media/chVgEkHr9oYz4ZPGeU/200.webp?cid=ecf05e479ac3ec00882e07bd3ea0779e245e8204477a6428&rid=200.webp',
