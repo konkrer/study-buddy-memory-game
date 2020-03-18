@@ -26,12 +26,12 @@ header {
     width: 85%;
     height: 85%;
     color: red;
-    background-color: rgb(27, 0, 81);
+    /* background-color: rgb(27, 0, 81); */
     border-radius: 130px 130px 15px 15px;
     border: blue 3px solid;
     text-shadow: 7px 7px 5px black;
     margin: 0 auto;
-    margin-bottom: .8em;
+    /* margin-bottom: .8em; */
     transition: all 3000ms;
     position: relative;
     /* transform-style: preserve-3d; */
@@ -328,6 +328,11 @@ article {
 .mb-4 {
     margin-bottom: 20px;
 }
+
+.mt-0 {
+    margin-top: 0px;
+}
+
 .mt-2 {
     margin-top: 10px;
 }
@@ -341,8 +346,8 @@ fieldset {
     color: red;
 }
 
-.trans-bg-1 {
-    background-color: rgba(27, 0, 81, .9);
+.bg-purp {
+    background-color: rgba(27, 0, 81, 1);
 }
 
 .float-left {

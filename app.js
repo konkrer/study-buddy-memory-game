@@ -58,6 +58,7 @@ function initGame() {
     currCard = null;
     scoreBoard.classList.remove('hidden');
     document.querySelector('.img-intro').classList.add('display-none');
+    document.querySelector('.form-zone').classList.add('mt-0');
     cardDiv.removeEventListener('click', flipCard);
 }
 
@@ -211,15 +212,10 @@ function countdownTimer() {
 //--------helper functions----------------
 
 
-function sleep() {
-    return new Promise(resolve => setTimeout(resolve, 500));
-}
-
 function cardFactory (ques, i) {
     let pair = [];
     for (let string of Object.values(ques)) {
         if (/^https:\/\//.test(string)){
-            console.log('in make img')
             string = `<img src="${string}" class="card-img" data-gif="true" alt="gif">`;
         }
         let cardHTML = 
