@@ -30,7 +30,10 @@ if (highScore) {
     hscoreDisplay.innerText = highScore;
     hscoreDisplay.parentElement.classList.remove('hidden');
 }
-setTimeout(function() {document.body.style.opacity = '1.0';}, 300);
+
+window.addEventListener('load', () => 
+    setTimeout(() => document.body.style.opacity = '1.0', 300)
+);
 
 startBtn.addEventListener('click', startGame);
 closeOverlay.addEventListener('click', () => overlay.classList.toggle('display-none'));
