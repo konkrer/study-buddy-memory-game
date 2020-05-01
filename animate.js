@@ -1,3 +1,5 @@
+'use strict';
+
 /* global document, window */
 
 function pulseBrain() {
@@ -7,8 +9,8 @@ function pulseBrain() {
       document.querySelector('.img-intro').classList.contains('display-none')
     ) {
       clearInterval(timerId);
-      brainImg.classList.toggle('brain-grow');
     }
+    brainImg.classList.toggle('brain-grow');
   }, 500);
 }
 

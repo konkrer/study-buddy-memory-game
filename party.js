@@ -1,3 +1,5 @@
+'use strict';
+
 /* eslint-disable no-use-before-define */
 /* global document, window */
 
@@ -26,13 +28,14 @@ partyBtn.addEventListener('click', () => {
       bdy.addEventListener('mousemove', changeBackground);
       break;
     default:
+      // eslint-disable-next-line no-console
       console.warn('Switch Malfunction, choice out of range.');
   }
 });
 
 function changeBackground(e) {
-  let x = e.pageX;
-  let y = e.pageY;
+  const x = e.pageX;
+  const y = e.pageY;
   style(x, y);
 }
 

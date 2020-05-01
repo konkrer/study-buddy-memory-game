@@ -1,3 +1,5 @@
+'use strict';
+
 /* eslint-disable no-multi-assign */
 /* eslint-disable no-param-reassign */
 /* global localStorage, document, window, DATA */
