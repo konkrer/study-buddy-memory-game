@@ -11,20 +11,16 @@ let style;
 
 partyBtn.addEventListener('click', () => {
   choice++;
-  choice = choice > 2 ? 0 : choice;
+  choice = choice > 1 ? 0 : choice;
   bdy.removeEventListener('mousemove', changeBackground);
   switch (choice) {
     case 0:
-      partyBtn.innerText = 'Enable Party Mode';
+      bdy.style.background = "url('static/webb-dark.png')";
+      partyBtn.innerText = 'Enable Dynamic Background';
       break;
     case 1:
-      partyBtn.innerText = 'Enable Seizure Mode';
-      style = changeColorBodySlow;
-      bdy.addEventListener('mousemove', changeBackground);
-      break;
-    case 2:
       partyBtn.innerText = 'OFF';
-      style = changeColorBodyQuick;
+      style = changeColorBodySlow;
       bdy.addEventListener('mousemove', changeBackground);
       break;
     default:

@@ -31,20 +31,20 @@
             <h2 class="red mb-2">Choose a topic</h2>
             <form action="" class="mb-2">
                 <fieldset>
+                    <label for="GIFS">GIFS</label> 
+                    <input type="radio" name="topic" id="GIFS" value="GIFS" checked>
+
                     <label for="JavaScript">JavaScript</label>
-                    <input type="radio" name="topic" id="JavaScript" value="JavaScript" checked>
+                    <input type="radio" name="topic" id="JavaScript" value="JavaScript">
                 
                     <label for="Python">Python</label>
                     <input type="radio" name="topic" id="Python" value="Python">
                     
-                    <label for="CSS">CSS</label>
+                    <!-- <label for="CSS">CSS</label>
                     <input type="radio" name="topic" id="CSS" value="CSS">
                     
                     <label for="HTML">HTML</label> 
-                    <input type="radio" name="topic" id="HTML" value="HTML">
-
-                    <label for="GIFS">GIFS</label> 
-                    <input type="radio" name="topic" id="GIFS" value="GIFS">
+                    <input type="radio" name="topic" id="HTML" value="HTML"> -->
                 </fieldset>        
             <!-- <br>  -->
             <div class="start-btn-div">
@@ -65,16 +65,16 @@
             <article>
                 <h2 class="text-blue inst-title text-glow-white">How to play:</h2>
                 <h3>
-                    Pick a topic then start the game.
+                    Pick a coding topic to quiz or just go with GIFS then start the game.
                 </h3>
                 <h3 class="text-left">    
                     You can flip one card at a time then flip it back over. Flip two
-                    cards over at the same time when you think you can pair a question with its answer.
+                    cards over at the same time when you think you can pair a question with its answer (or a GIF with it's match).
                     If you are correct your points remain at 100, otherwise you will lose ten points.
                 </h3>
                 <h3 class="text-left">
-                    When you have paired all question cards with their answer card or time runs out your final score will be 
-                    calculated by multiplying your points by the timer value. The quicker you finish the 
+                    When you have paired all matching cards or time runs out your final score will be 
+                    calculated by multiplying your points remaining by the timer value. The quicker you finish the 
                     higher score you get.
                 </h3>
                 <h2>Good Luck!</h2>
@@ -92,7 +92,7 @@
     </section>
     
     <div id="party-btn-div">
-        <button id="btn-2" class="btn">Enable Party Mode</button>
+        <button id="btn-2" class="btn">Enable Dynamic Background</button>
     </div>
         
 </body>
